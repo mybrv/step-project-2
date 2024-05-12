@@ -5,6 +5,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-SemiBold.eot');
+    src: local('Gilroy SemiBold Italic'), local('Gilroy-SemiBoldItalic'),
+    url('../fonts/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Gilroy-SemiBold.woff') format('woff'),
+    url('../fonts/Gilroy-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+
 h3 {
-    font-family: Inter;
+    font-family: Gilroy;
 }
