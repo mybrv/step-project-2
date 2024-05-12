@@ -7,7 +7,6 @@ import browserSync from "browser-sync";
 import imagemin from 'gulp-imagemin';
 import dartSass from "sass";
 import gulpSass from "gulp-sass";
-
 const sass = gulpSass(dartSass);
 
 const html = () => {
@@ -45,7 +44,7 @@ const image = () => {
 };
 
 const fontTaskHandler = () => {
-	return src("./src/fonts/**/*.*").pipe(dest("./dist/fonts"));
+	return gulp.src("./src/fonts/**/*.*").pipe(gulp.dest("./dist/fonts"));
 };
 
 
@@ -77,14 +76,14 @@ gulp.task("script", js);
 gulp.task("cleanDist", cleanDist);
 gulp.task("browser-sync", server);
 gulp.task("image", image);
-
+gulp.task("fonts", fontTaskHandler)
 gulp.task("build", gulp.series(cleanDist, gulp.parallel(html, css, js, image)));
 
 gulp.task(
   "dev",
   gulp.series(
       cleanDist,
-    gulp.parallel(html, css, js, image),
+    gulp.parallel(html, css, js, image, fontTaskHandler),
     gulp.parallel(server, watcher)
   )
 );
