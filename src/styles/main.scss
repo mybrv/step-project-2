@@ -37,27 +37,22 @@
         }
 
         .title-design__section {
-            color: var(--text-black-title); 
-            margin-top: 20px;
-            text-align: center;
-            font-family: Gilroy;
-            font-size: 56px;
-            font-weight: 300;
-            font-style: normal;
-            line-height: normal;
-            text-transform: uppercase;
-            margin-bottom: 40px;
+            @include title-section-mobile;
         }
 
         .block__design {
-            @include section-design;
+            @include section-column;
             gap: 30px;
             .item-block__design {
-                @include section-design;
+                @include section-column;
                 gap: 10px;
                 align-self: stretch;
                 padding-bottom: 30px;
                 border-bottom: 1px solid #252525;
+
+                &:last-child{
+                    border-bottom: none;
+                }
 
                 .title-item-block {
                     color: var(--text-black);
@@ -74,16 +69,349 @@
                     }
                 }
                 .text-item-block{
-                    color: var(--text-black);
-                    font-family: Inter;
-                    font-size: 20px;
+                    @include text-section;
+                }
+            }
+        }
+    }
+
+    .clients__section {
+        border-top: 1px solid #252525;
+
+        .title-clients__section {
+            @include title-section-mobile;
+        }
+
+        .card__clients {
+            @include section-column;
+            gap: 40px;
+            
+            .box__card_clients{
+                @include section-column;
+                gap: 30px;
+                padding-bottom: 40px;
+                border-bottom: 1px solid #252525;
+
+                &:last-child{
+                    border-bottom: none;
+                }
+
+                .title-box__card {
+                    color: #333;
+                    font-family: Gilroy;
+                    font-size: 380%;
                     font-style: normal;
-                    font-weight: 400;
-                    line-height: 28px; 
+                    font-weight: 800;
+                    line-height: 60px;
+                }
+
+                .text-box__card {
+                    @include text-section;
+                }
+
+                .item__box-card {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    .client {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                    }
+                    .data-item__box {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        
+                        .name-data__item {
+                            color: var(--text-black);
+                            font-family: Inter;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 20px;
+                        }
+
+                        .job-data__item {
+                            @include text-section;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and  (max-width:1200px) and (min-width:768px) {
+    .container {
+        max-width:90%;
+        margin: 0 auto;
+    } 
+
+    .design__section {
+        .background-design__section {
+            background-image: url(../images/what-i-do-bgd.jpg);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-bottom: 991px;
+        }
+
+        .title-design__section {
+            @include title_section-tablet;
+            font-size: 135px;
+        }
+
+        .block__design {
+            @include section-column;
+            gap: 40px;
+            .item-block__design {
+                @include section-column;
+                gap: 10px;
+                align-self: stretch;
+                padding-bottom: 40px;
+                border-bottom: 1px solid #252525;
+
+                .title-item-block {
+                    color: var(--text-black);
+                    font-family: Gilroy-SemiBold;
+                    font-size: 44px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 48px;
+                    text-transform: uppercase;
+                    
+
+                    .number {
+                        font-family: Gilroy-Light;
+                        font-weight: 400;
+                    }
+                }
+                .text-item-block{
+                    @include text-section;
                 }
             }
 
         }
     }
 
+    .clients__section {
+        border-top: 1px solid #252525;
+
+        .title-clients__section {
+            @include title_section-tablet;
+            font-size: 120px;
+        }
+
+        .card__clients {
+            @include section-column;
+            gap: 40px;
+            
+            .box__card_clients{
+                @include section-column;
+                gap: 30px;
+                padding-bottom: 40px;
+                border-bottom: 1px solid #252525;
+
+                &:last-child{
+                    border-bottom: none;
+                }
+
+                .title-box__card {
+                    color: #333;
+                    font-family: Gilroy;
+                    font-size: 380%;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: 60px;
+                }
+
+                .text-box__card {
+                    @include text-section;
+                }
+
+                .item__box-card {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    .client {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                    }
+                    .data-item__box {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        
+                        .name-data__item {
+                            color: var(--text-black);
+                            font-family: Inter;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 20px;
+                        }
+
+                        .job-data__item {
+                            @include text-section;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
+@media screen and (min-width:1200px) {
+    .container {
+        max-width:90%;
+        margin: 0 auto;
+    } 
+
+    .design__section {
+        display: flex;
+        gap: 111px;
+        .background-design__section {
+            background-image: url(../images/what-i-do-bgd.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+
+        .title-design__section {
+            @include title_section-tablet;
+
+        }
+
+        .block__design {
+            width: 100%;
+            padding-right: 70px;
+            @include section-column;
+            gap: 40px;
+            .item-block__design {
+                @include section-column;
+                gap: 10px;
+                align-self: stretch;
+                padding-bottom: 40px;
+                border-bottom: 1px solid #252525;
+
+                .title-item-block {
+                    color: var(--text-black);
+                    font-family: Gilroy-SemiBold;
+                    font-size: 44px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 48px;
+                    text-transform: uppercase;
+                    
+
+                    .number {
+                        font-family: Gilroy-Light;
+                        font-weight: 400;
+                    }
+                }
+                .text-item-block{
+                    @include text-section;
+                }
+            }
+
+        }
+    }
+
+    .clients__section {
+        border-top: 1px solid #252525;
+
+        .title-clients__section {
+            @include title_section-tablet;
+            font-size: 190px;
+        }
+
+        .card__clients {
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            .box__card_clients{
+                width: 100%;
+                @include section-column;
+                gap: 30px;
+                outline: none;
+                padding: 30px;
+                border: 1px solid #252525;
+                // border-bottom: 1px solid #252525;
+
+                &:first-child{
+                    // padding-top: 30px;
+                    border-top: none;
+                    border-left: none;
+                }
+
+                &:nth-child(4){
+                    // padding-top: 30px;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: none;
+                }
+
+                &:nth-child(2){
+                    padding-top: 30px;
+                    border-top: none;
+                    border-left: none;
+                }
+                // &:nth-child(5){
+                //     padding-top: 30px;
+                //     border-top: 1px solid #252525;
+                //     border-right: 1px solid #252525;
+                //     border-bottom: none;
+                // }
+
+                .title-box__card {
+                    color: #333;
+                    font-family: Gilroy;
+                    font-size: 380%;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: 60px;
+                }
+
+                .text-box__card {
+                    @include text-section;
+                }
+
+                .item__box-card {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    .client {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                    }
+                    .data-item__box {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        
+                        .name-data__item {
+                            color: var(--text-black);
+                            font-family: Inter;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 20px;
+                        }
+
+                        .job-data__item {
+                            @include text-section;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
