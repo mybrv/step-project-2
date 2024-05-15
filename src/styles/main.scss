@@ -18,105 +18,12 @@
     font-weight: 600;
     font-style: italic;
 }
-@font-face {
-    font-family: 'Gilroy-Medium';
-    src: url('../fonts/Gilroy-Medium.eot');
-    src: local('../fonts/Gilroy Medium'), local('Gilroy-Medium'),
-    url('../fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Gilroy-Medium.woff') format('woff'),
-    url('../fonts/Gilroy-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Gilroy-SemiBold';
-    src: url('../fonts/Gilroy-SemiBold.eot');
-    src: local('../fonts/Gilroy SemiBold'), local('Gilroy-SemiBold'),
-    url('../fonts/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Gilroy-SemiBold.woff') format('woff'),
-    url('../fonts/Gilroy-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-.container {
-    width: 1280px;
-    max-width: 100%;
-    margin: 0 auto;
-}
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    margin-top: 40px;
-    padding-left: 31px;
-    padding-right: 31px;
-    .header-logo__text {
-        text-decoration: none;
-        color: var(--text-black);
-        font-family: Gilroy;
-        font-size: 35px;
-        font-style: normal;
-        font-weight: 800;
-        .header-logo__text--medium {
-            color: var(--text-black);
-            font-family: Gilroy-Medium;
-            font-size: 35px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            letter-spacing: -0.7px;
-        }
-    }
-    .header__menu {
-        text-decoration: none;
-        color: var(--text-black-title);
-        text-align: center;
-        font-family: Gilroy-SemiBold;
-        font-size: 25px;
-        font-weight: 400;
-    }
-}
 
 @media screen and  (max-width:768px) and (min-width:320px) {
 
     .container {
         max-width:90%;
         margin: 0 auto;
-    }
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 30px;
-        margin-top: 40px;
-        padding-left: 31px;
-        padding-right: 31px;
-        .header-logo__text {
-            text-decoration: none;
-            color: var(--text-black);
-            font-family: Gilroy;
-            font-size: 35px;
-            font-style: normal;
-            font-weight: 800;
-            .header-logo__text--medium {
-                color: var(--text-black);
-                font-family: Gilroy-Medium;
-                font-size: 35px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                letter-spacing: -0.7px;
-            }
-        }
-        .header__menu {
-            text-decoration: none;
-            color: var(--text-black-title);
-            text-align: center;
-            font-family: Gilroy-SemiBold;
-            font-size: 25px;
-            font-weight: 400;
-        }
     }
 
     .design__section{
@@ -177,12 +84,6 @@
             }
 
         }
-    }
-
-}
-@media screen and  (max-width:489px) {
-    .header-logo__text {
-        display: none;
     }
 
 }

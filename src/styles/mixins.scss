@@ -1,6 +1,39 @@
-@mixin section-design {
+@mixin section-column {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            align-self: stretch;
+}
+
+@mixin title-section-mobile {
+    color: var(--text-black-title); 
+    margin-top: 20px;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 56px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+@mixin title_section-tablet {
+    color: var(--text-black-title); 
+    margin-top: 20px;
+    text-align: center;
+    font-family: Gilroy;
+    font-weight: 300;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+@mixin text-section {
+    color: var(--text-black);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; 
 }
