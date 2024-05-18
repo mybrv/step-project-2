@@ -110,7 +110,7 @@ footer {
         color: #252525;
         text-align: center;
         font-family: Gilroy-Medium;
-        font-size: 150px;
+        font-size: 8.523vw;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -120,7 +120,7 @@ footer {
     .who-is {
         color: #252525;
         font-family: Gilroy-UltraLight;
-        font-size: 150px;
+        font-size: 8.523vw;
         font-style: normal;
         font-weight: 200;
         line-height: normal;
@@ -144,10 +144,9 @@ footer {
     padding-bottom: 70px;
 }
 .hero-section {
-    background-image: linear-gradient(to right, #f5f3ea 75%, #252525 25%);
+    background-image: linear-gradient(to right, #f5f3ea 70vw, #252525 30vw);
     .about-hero {
         padding-bottom: 70px;
-
         display: flex;
         justify-content: space-between;
         gap: 70px;
@@ -155,7 +154,7 @@ footer {
         &__text {
             color: #252525;
             font-family: Gilroy-UltraLight;
-            font-size: 2.386vw;
+            font-size: 2.5vw;
             font-style: normal;
             line-height: normal;
             &--bold {
@@ -194,6 +193,7 @@ footer {
     border-bottom: 1px solid black;
     .logo-gallery {
         display: flex;
+        flex-wrap: wrap;
         list-style: none;
         padding-top: 70px;
         padding-bottom: 70px;
