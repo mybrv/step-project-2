@@ -155,7 +155,7 @@ footer {
         &__text {
             color: #252525;
             font-family: Gilroy-UltraLight;
-            font-size: 42px;
+            font-size: 2.386vw;
             font-style: normal;
             line-height: normal;
             &--bold {
@@ -163,7 +163,6 @@ footer {
             }
         }
         .about-me{
-            background-color: #252525;
             display: flex;
             flex-direction: column;
             gap: 30px;
@@ -763,6 +762,7 @@ footer {
             .about-hero__text {
                 text-align: center;
                 padding: 30px;
+                font-size: 28px;
                 font-weight: 300;
                 &--bold {
                     font-family: Gilroy-Bold;
