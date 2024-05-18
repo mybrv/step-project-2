@@ -10,7 +10,7 @@ import gulpSass from "gulp-sass";
 const sass = gulpSass(dartSass);
 
 const html = () => {
-  return gulp.src("./src/*.html").pipe(gulp.dest("./dist"));
+  return gulp.src("./src/*.html").pipe(gulp.dest("./docs"));
 };
 
 const css = () => {
@@ -19,7 +19,7 @@ const css = () => {
     .pipe(sass().on("error", sass.logError))
     .pipe(concat("styles.css"))
     .pipe(cleanCSS({ compatibility: "ie8" }))
-    .pipe(gulp.dest("./dist/styles"));
+    .pipe(gulp.dest("./docs/styles"));
 };
 
 const js = () => {
@@ -34,29 +34,29 @@ const js = () => {
         },
       })
     )
-    .pipe(gulp.dest("./dist/scripts"));
+    .pipe(gulp.dest("./docs/scripts"));
 };
 
 const image = () => {
     return gulp.src("./src/images/**/*.*")
         .pipe(imagemin())
-        .pipe(gulp.dest("./dist/images"));
+        .pipe(gulp.dest("./docs/images"));
 };
 
 const fontTaskHandler = () => {
-	return gulp.src("./src/fonts/**/*.*").pipe(gulp.dest("./dist/fonts"));
+	return gulp.src("./src/fonts/**/*.*").pipe(gulp.dest("./docs/fonts"));
 };
 
 
 const cleanDist = () => {
-	return gulp.src('./dist', { allowEmpty: true })
+	return gulp.src('./docs', { allowEmpty: true })
 		.pipe(clean());
   };
 
 const server = () => {
   browserSync.init({
     server: {
-      baseDir: "./dist",
+      baseDir: "./docs",
     },
   });
 };
