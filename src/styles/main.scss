@@ -193,7 +193,6 @@ footer {
     border-bottom: 1px solid black;
     .logo-gallery {
         display: flex;
-        flex-wrap: wrap;
         list-style: none;
         padding-top: 70px;
         padding-bottom: 70px;
@@ -1052,5 +1051,10 @@ footer {
                 padding: 0;
             }
         }
+    }
+}
+@media screen and (max-width: 1300px){
+    .logo-gallery {
+        flex-wrap: wrap;
     }
 }
